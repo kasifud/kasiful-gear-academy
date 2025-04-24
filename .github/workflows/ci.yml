@@ -25,6 +25,7 @@ jobs:
       - name: Check and test
         run: |
           cd pebbles-game
+          rustup component add rust-src
           cargo fmt --all --check
           cargo clippy --all-targets -- -D warnings -A unused-imports
           cargo t
